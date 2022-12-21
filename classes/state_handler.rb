@@ -13,4 +13,11 @@ class StateHandler
   def create_code
     @code.fill(@colors.rand(6))
   end
+
+  # check the player's guess against the code
+  def guess_check(user_guess)
+    return unless user_guess.instance_of?(Array)
+
+    user_guess.eql?(@code)
+  end
 end
