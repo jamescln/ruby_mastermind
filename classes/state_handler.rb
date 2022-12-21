@@ -11,7 +11,8 @@ class StateHandler
 
   # create a random code
   def create_code
-    @code.fill(@colors.rand(6))
+    4.times { |i| @code[i] = @colors[rand(6)] }
+    print @code
   end
 
   # check the player's guess against the code
