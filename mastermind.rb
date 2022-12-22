@@ -5,7 +5,8 @@ require_relative 'classes/state_handler'
 state = StateHandler.new('Player')
 state.create_code
 puts 'Enter your guess below'
-if state.guess_check([gets, gets, gets, gets])
+player_guess = [gets, gets, gets, gets]
+if state.guess_check(player_guess)
   puts 'You win!'
 else
   puts 'Not even close'
