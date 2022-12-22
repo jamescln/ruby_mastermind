@@ -17,8 +17,9 @@ class StateHandler
 
   # check the player's guess against the code
   def guess_check(user_guess)
-    return unless user_guess.instance_of?(Array)
-
+    # return unless user_guess.instance_of?(Array)
+    print user_guess
+    puts user_guess.eql?(@code)
     user_guess.eql?(@code)
   end
 end
