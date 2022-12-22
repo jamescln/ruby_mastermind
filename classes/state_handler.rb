@@ -19,9 +19,11 @@ class StateHandler
   def guess_check(user_guess)
     return unless user_guess.instance_of?(Array)
 
-    chomp_guess = user_guess.map(&:chomp)
-    chomp_guess.eql?(@code)
+    user_guess.eql?(@code)
   end
 
-  def guess_feedback; end
+  # compare guess to code and return an array with accuracy feedback
+  def guess_feedback(user_guess)
+    # this will do an each with index
+  end
 end
